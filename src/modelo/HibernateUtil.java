@@ -7,9 +7,12 @@ import org.hibernate.cfg.AnnotationConfiguration;
 public class HibernateUtil {
 
 	private static SessionFactory factory;
+	
 	private HibernateUtil() {
-		AnnotationConfiguration cfg = new AnnotationConfiguration();
-		cfg.configure("hibernate.cfg.xml");//pega as configurções aqui
+		AnnotationConfiguration cfg = 
+				new AnnotationConfiguration();
+		cfg.configure("hibernate.cfg.xml");
+		//pega as configurções aqui
 		factory = cfg.buildSessionFactory();
 	}
 	public static Session getSession(){

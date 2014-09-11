@@ -4,18 +4,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-
 @Entity
 public class Produto {
+
+	private String nome;
+	
+	private String descricao;
 
 	@Id
 	@GeneratedValue
 	private Integer codigo;
 	
-	private String nome;
-	
-	private String descricao;
-
 	public Integer getCodigo() {
 		return codigo;
 	}
